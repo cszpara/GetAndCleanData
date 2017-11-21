@@ -1,4 +1,4 @@
-##This Script is the course project for the Getting and Cleaning Data Coursera course. The R script, run_analysis.R, does the following:
+This Script is the course project for the Getting and Cleaning Data Coursera course. The R script, `run_analysis.R`, does the following:
 
 1. Get data from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip and unzip files
 2. Imports Training & Test Datasets

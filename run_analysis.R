@@ -1,4 +1,3 @@
-setwd("C:/Users/charless/Dropbox/Courses/Data Science Certificate/03) Getting and Cleaning Data/Week 4")
 rm(list = ls())
 
 library(dplyr)
@@ -57,8 +56,11 @@ DataSet$Subject <- as.factor(DataSet$Subject)
 DataSet$Activity <- as.factor(DataSet$Activity)
 Columns <- grepl("mean", colnames(DataSet))
 Columns[2:3] <- TRUE
-DataSet <- DataSet[,Columns]
+Average <- DataSet[,Columns]
 rm(Columns)
-Average <- DataSet %>%
+Average <- Average %>%
   group_by(Subject, Activity) %>%
   summarise_each(funs(mean))
+
+#Save tidy data
+write.csv(Average,"tidy.csv", row.names = FALSE)
