@@ -63,4 +63,4 @@ Average <- Average %>%
   summarise_each(funs(mean))
 
 #Save tidy data
-write.csv(Average,"tidy.csv", row.names = FALSE)
+write.table(Average,"tidy.txt", row.names = FALSE)
